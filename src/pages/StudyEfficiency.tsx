@@ -1,4 +1,67 @@
+import ExampleCard from '../components/ExampleCard'
+
 function StudyEfficiency() {
+  const studyExamples = [
+    {
+      id: 'math-problem',
+      title: '数学の問題解説',
+      prompt: '二次関数 y = x² - 4x + 3 の頂点と軸の方程式を求めて、グラフの書き方も教えてください',
+      result: '二次関数の頂点と軸を求め、グラフの描き方を解説します：',
+      details: [
+        '平方完成：y = (x - 2)² - 1',
+        '頂点の座標：(2, -1)',
+        '軸の方程式：x = 2',
+        'x切片：x = 1, 3（y = 0を代入）',
+        'y切片：y = 3（x = 0を代入）',
+        'グラフ：下に凸の放物線、頂点(2,-1)を通る'
+      ]
+    },
+    {
+      id: 'english-essay',
+      title: '英作文の添削',
+      prompt: '「My Dream」というテーマで書いた英作文を添削してください。"I want to be doctor. Because I like help people who sick."',
+      result: '英作文を添削し、改善案を提示しました：',
+      details: [
+        '原文：I want to be doctor.',
+        '修正：I want to be a doctor.（冠詞"a"が必要）',
+        '原文：Because I like help people who sick.',
+        '修正：Because I like helping people who are sick.',
+        '文法ポイント：like + 動名詞(ing)、関係代名詞の後にbe動詞',
+        'より自然な表現：My dream is to become a doctor and help those in need.'
+      ]
+    },
+    {
+      id: 'history-summary',
+      title: '歴史の要点整理',
+      prompt: '明治維新について、テストに出やすいポイントを年号付きでまとめてください。人物関係図も作ってください',
+      result: '明治維新の重要ポイントと人物相関をまとめました：',
+      details: [
+        '1853年：ペリー来航（黒船）',
+        '1867年：大政奉還（徳川慶喜→明治天皇）',
+        '1868年：王政復古の大号令、戊辰戦争開始',
+        '1871年：廃藩置県',
+        '1872年：学制公布、鉄道開通（新橋-横浜）',
+        '重要人物：西郷隆盛、大久保利通、木戸孝允（維新三傑）',
+        '坂本龍馬：薩長同盟の仲介役'
+      ]
+    },
+    {
+      id: 'exam-prep',
+      title: '資格試験対策',
+      prompt: '簿記3級の仕訳問題を5問作って、解答と解説もつけてください。難易度は本試験レベルでお願いします',
+      result: '簿記3級の実践問題を作成しました（解答・解説付き）：',
+      details: [
+        '問1：現金100,000円で商品を仕入れた',
+        '解答：(借)仕入 100,000 / (貸)現金 100,000',
+        '問2：売掛金50,000円を現金で回収した',
+        '解答：(借)現金 50,000 / (貸)売掛金 50,000',
+        '問3：給料200,000円を普通預金から支払った',
+        '解答：(借)給料 200,000 / (貸)普通預金 200,000',
+        'ポイント：借方と貸方の金額は必ず一致させる'
+      ]
+    }
+  ]
+
   return (
     <div className="page-container">
       <div className="page-header">
@@ -7,6 +70,14 @@ function StudyEfficiency() {
           資格勉強や受験対策をGensparkで効率化！中学生から大学生まで活用できます
         </p>
       </div>
+
+      <section className="detailed-examples-section">
+        <h2>📝 実際の学習での活用例</h2>
+        <p className="section-description">
+          実際の勉強でどのようにGensparkを活用できるか、具体的な例をご覧ください
+        </p>
+        <ExampleCard examples={studyExamples} />
+      </section>
 
       <section className="feature-section">
         <h2>📖 要点まとめの自動作成</h2>

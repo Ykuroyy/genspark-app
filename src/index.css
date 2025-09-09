@@ -492,6 +492,253 @@ body {
   }
 }
 
+.real-examples {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%);
+  border-radius: 16px;
+}
+
+.real-examples h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.section-description {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.detailed-examples-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%);
+  border-radius: 16px;
+}
+
+.detailed-examples-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.example-showcase {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.example-tabs {
+  display: flex;
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.example-tab {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.example-tab:hover {
+  color: var(--primary-color);
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.example-tab.active {
+  color: var(--primary-color);
+  background: white;
+}
+
+.example-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.example-content {
+  padding: 2rem;
+}
+
+.example-prompt-section,
+.example-result-section {
+  margin-bottom: 1.5rem;
+}
+
+.example-prompt-section h4,
+.example-result-section h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.prompt-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.example-arrow {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 1rem 0;
+}
+
+.result-box {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.result-details {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.result-details li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.result-details li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.use-case-gallery {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+  color: var(--text-secondary);
+}
+
+.category-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.category-btn:hover {
+  background: white;
+  border-color: var(--primary-color);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-color: transparent;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+}
+
+.category-name {
+  font-weight: 500;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.example-card {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.example-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.example-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.example-card p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;

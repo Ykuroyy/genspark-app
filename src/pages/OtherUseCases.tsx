@@ -1,3 +1,5 @@
+import UseCaseGallery from '../components/UseCaseGallery'
+
 function OtherUseCases() {
   return (
     <div className="page-container">
@@ -7,6 +9,8 @@ function OtherUseCases() {
           日常生活から専門的な作業まで、Gensparkの可能性は無限大です
         </p>
       </div>
+
+      <UseCaseGallery />
 
       <section className="feature-section">
         <h2>🎨 創作活動のサポート</h2>
